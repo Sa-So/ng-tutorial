@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-life-cycle-hooks',
@@ -6,9 +6,20 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   styleUrls: ['./life-cycle-hooks.component.css']
 })
 export class LifeCycleHooksComponent implements OnInit,OnDestroy {
+
+  state = false;
+
   ngOnInit(){
     console.log('lch comp. initialized')
     // load data from database here ...
+  }
+
+  ngOnChanges(){
+    console.log('this is called once at start if props are passed & everytime they change')
+  }
+
+  ngDoCheck(){
+    console.log('change in state detected');
   }
 
   
