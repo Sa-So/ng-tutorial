@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class DataBindingComponent {
   clickable = false;
   count = 0;
+  name = "";
 
   inc(){
     this.count++;
@@ -15,5 +16,9 @@ export class DataBindingComponent {
 
   toggle(){
     this.clickable=!this.clickable;
+  }
+
+  changeNameToS(){
+    this.name = "S"
   }
 }
