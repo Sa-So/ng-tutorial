@@ -1,3 +1,4 @@
-<h2>{{count}}</h2>
-<button [disabled]="clickable" (click)="inc()">Increment</button>
+<!-- <h2>{{count}}</h2> -->
+<!-- <button [disabled]="clickable" (click)="inc()">Increment</button> -->
+<app-life-cycle-hooks *ngIf="clickable"></app-life-cycle-hooks>
 <button (click)="toggle()">Toggle</button>
