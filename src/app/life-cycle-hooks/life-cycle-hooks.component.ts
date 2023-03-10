@@ -1,4 +1,5 @@
 import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import { LoggerService } from '../logger.service';
 
 @Component({
   selector: 'app-life-cycle-hooks',
@@ -7,7 +8,10 @@ import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 })
 export class LifeCycleHooksComponent implements OnInit,OnDestroy {
 
+  constructor(private svc: LoggerService){};
+
   state = false;
+  data = this.svc.data;
 
   ngOnInit(){
     console.log('lch comp. initialized')

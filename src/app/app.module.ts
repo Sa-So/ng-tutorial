@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
+import { CompComponent } from './comp/comp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
-    LifeCycleHooksComponent
+    LifeCycleHooksComponent,
+    CompComponent
   ],
   imports: [
     BrowserModule,
